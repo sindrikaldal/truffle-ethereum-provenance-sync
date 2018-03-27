@@ -1,25 +1,4 @@
-kip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Explore
- @sindrikaldal
-Sign out
-Your GitHub academic discount coupon has expired
-If you're still eligible, you may re-apply.
-If you're no longer eligible, you may either update your payment information to continue using private repositories, or downgrade your account.
-Your private repositories have been locked until you have resolved this. If you have any questions, please contact GitHub Education.
 
-1
-0 0 sindrikaldal/truffle-ethereum-provenance-sync
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
-truffle-ethereum-provenance-sync/.gitignore
-d371fe2  29 seconds ago
-@sindrikaldal sindrikaldal Initial commit
-     
-60 lines (42 sloc)  884 Bytes
 # Logs
 logs
 *.log
@@ -78,17 +57,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
-© 2018 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
-About
-Press h to open a hovercard with more details.
