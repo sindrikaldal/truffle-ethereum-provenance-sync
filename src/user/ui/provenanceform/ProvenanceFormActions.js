@@ -12,6 +12,7 @@ function provenanceUpdated(user) {
   }
 }
 
+// A helper function to add a element to a map whose values are arrays
 function addToMap(map, key, element, type) {
   let value = map.get(key);
   if (value === undefined) {
@@ -60,7 +61,9 @@ let generateMerkleTree = (elements) => {
     return null;
   }
 
-  // Do not allow elements largar than 8
+  // Adjust the number of merkle leafs if the number of elements is greater than 8.
+  // The number of merkleleafs is always set to a number that is a power of 2 for a
+  // well balanced merkle tree and predictability in calculations
   if (elements.length > 8)  {
     while (numberOfMerkleLeafs < elements.length) {
       numberOfMerkleLeafs *= 2;
@@ -112,11 +115,6 @@ let generateMerkleTree = (elements) => {
     merkleIndex += numberOfNodesInLayer
     numberOfNodesInLayer /= 2;
   }
-
-
-    console.log("Hashes :" , hashes)
-    console.log("Merkle nodes : ", merkleNodes)
-    console.log("Proofs : ", proofs)
 
   // Return the merkle root and proofs for each element submitted
   return {"merkleRoot" : merkleNodes[merkleNodes.length - 1], "proofs" : proofs};
