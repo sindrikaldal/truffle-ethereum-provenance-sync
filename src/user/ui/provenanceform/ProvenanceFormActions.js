@@ -62,8 +62,9 @@ let generateMerkleTree = (elements) => {
 
   // Do not allow elements largar than 8
   if (elements.length > 8)  {
-    console.log("Too many elements. Application logic not implemented yet")
-    return null;
+    while (numberOfMerkleLeafs < elements.length) {
+      numberOfMerkleLeafs *= 2;
+    }
   }
 
   // First layer is the number of leafs
@@ -111,6 +112,11 @@ let generateMerkleTree = (elements) => {
     merkleIndex += numberOfNodesInLayer
     numberOfNodesInLayer /= 2;
   }
+
+
+    console.log("Hashes :" , hashes)
+    console.log("Merkle nodes : ", merkleNodes)
+    console.log("Proofs : ", proofs)
 
   // Return the merkle root and proofs for each element submitted
   return {"merkleRoot" : merkleNodes[merkleNodes.length - 1], "proofs" : proofs};

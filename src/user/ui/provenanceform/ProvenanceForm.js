@@ -44,7 +44,7 @@ class ProvenanceForm extends Component {
           <br />
 
           <button type="submit" className="pure-button pure-button-primary">Update</button>
-          <button type="add-input" onClick={() => this.appendInput() } className="pure-button pure-button-primary">Add input field</button>
+          <button type="button" onClick={() => this.appendInput() } className="pure-button pure-button-primary">Add input field</button>
         </fieldset>
       </form>
     )
